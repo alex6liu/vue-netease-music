@@ -30,3 +30,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## npm packages
+- 轮播组件 [vue-awesome-swiper](https://www.npmjs.com/package/vue-awesome-swiper)

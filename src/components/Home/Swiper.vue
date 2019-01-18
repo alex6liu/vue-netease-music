@@ -1,0 +1,40 @@
+<template>
+  <swiper :options="swiperOption" ref="mySwiper" class="swiper">
+    <swiper-slide>I'm Slide 1</swiper-slide>
+    <swiper-slide>I'm Slide 2</swiper-slide>
+    <swiper-slide>I'm Slide 3</swiper-slide>
+    <swiper-slide>I'm Slide 4</swiper-slide>
+    <swiper-slide>I'm Slide 5</swiper-slide>
+    <swiper-slide>I'm Slide 6</swiper-slide>
+    <swiper-slide>I'm Slide 7</swiper-slide>
+  </swiper>
+</template>
+
+<script>
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+
+export default {
+  name: 'Swiper',
+  data() {
+    return {
+      swiperOption: {
+        autoplay:true
+      }
+    }
+  },
+  props: {
+    
+  },
+  components: {
+    swiper,
+    swiperSlide
+  },
+};
+
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+
+</style>

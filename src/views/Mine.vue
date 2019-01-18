@@ -9,7 +9,7 @@
 import WebHeader from '@/components/WebHeader.vue';
 
 export default {
-  name: 'find',
+  name: 'mine',
   components: {
     WebHeader,
   },
