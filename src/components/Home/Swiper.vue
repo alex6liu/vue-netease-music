@@ -17,6 +17,7 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
 import Download from './Download.vue';
+import { reconmendSongs } from '../../utils/api.js';
 
 export default {
   name: 'Swiper',
