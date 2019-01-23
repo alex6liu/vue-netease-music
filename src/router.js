@@ -16,12 +16,12 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/find',
+      path: '/discover',
       name: 'find',
       component: Find,
     },
     {
-      path: '/mine',
+      path: '/my',
       name: 'mine',
       component: Mine,
     },
