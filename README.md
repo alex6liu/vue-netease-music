@@ -1,4 +1,7 @@
 # vue-netease-music
+用vue写的网易云音乐网页版
+Api来自NeteaseCloudMusicApi
+部署在[heroku](https://netease-music-api.herokuapp.com)上
 
 ## Project setup
 ```
@@ -27,3 +30,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## npm packages
+- 轮播组件 [vue-awesome-swiper](https://www.npmjs.com/package/vue-awesome-swiper)
