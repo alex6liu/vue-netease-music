@@ -8,8 +8,10 @@ const base = 'https://netease-music-api.herokuapp.com';
 // cat:cat: tag, 比如 " 华语 "、" 古风 " 、" 欧美 "、" 流行 ", 默认为 "全部",可从歌单分类接口获取(/playlist/catlist)
 // 接口地址 : /top/playlist
 // 调用例子 : /top/playlist?limit=10&order=new
-export default {
-  reconmendSongs: `${base}/recommend/songs`,
+const api = {
+  reconmendSongs: `${base}/top/album?offset=0&limit=5`,
   board: `${base}/top/list`,
   playlist: `${base}/top/playlist`,
 };
+
+export default api;

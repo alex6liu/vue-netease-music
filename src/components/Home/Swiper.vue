@@ -1,13 +1,7 @@
 <template>
   <div class="swiper-container">
     <swiper :options="swiperOption" ref="mySwiper" class="swiper">
-      <swiper-slide>I'm Slide 1</swiper-slide>
-      <swiper-slide>I'm Slide 2</swiper-slide>
-      <swiper-slide>I'm Slide 3</swiper-slide>
-      <swiper-slide>I'm Slide 4</swiper-slide>
-      <swiper-slide>I'm Slide 5</swiper-slide>
-      <swiper-slide>I'm Slide 6</swiper-slide>
-      <swiper-slide>I'm Slide 7</swiper-slide>
+      <swiper-slide v-for="list in lists" v-bind:key="list.id"><img v-bind:src="list" class="slider-image" /></swiper-slide>
     </swiper>
     <download></download>
   </div>
@@ -17,7 +11,7 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
 import Download from './Download.vue';
-import { reconmendSongs } from '../../utils/api.js';
+import api from '../../utils/api.js';
 
 export default {
   name: 'Swiper',
@@ -25,7 +19,8 @@ export default {
     return {
       swiperOption: {
         autoplay:true
-      }
+      },
+      lists: [],
     }
   },
   props: {
@@ -35,6 +30,19 @@ export default {
     swiper,
     swiperSlide,
     Download,
+  },
+  mounted: function() {
+    fetch(api.reconmendSongs, {
+      headers : { 
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+      }
+      })
+      .then(res => res.json())
+      // .then(res => res.body)
+      .then(res => res.albums.map((elem) => {
+        this.lists.push(elem.picUrl)
+      }))
   },
 };
 
@@ -46,5 +54,9 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.slider-image {
+  width: 730px;
+  height: 336px;
 }
 </style>
