@@ -9,7 +9,7 @@ const base = 'https://netease-music-api.herokuapp.com';
 // 接口地址 : /top/playlist
 // 调用例子 : /top/playlist?limit=10&order=new
 const api = {
-  reconmendSongs: `${base}/top/album?offset=0&limit=5`,
+  reconmendSongs: `${base}/personalized/`,
   board: `${base}/top/list`,
   playlist: `${base}/top/playlist`,
 };

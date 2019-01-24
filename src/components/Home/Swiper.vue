@@ -20,7 +20,16 @@ export default {
       swiperOption: {
         autoplay:true
       },
-      lists: [],
+      lists: [
+        require('../../assets/images/home-slider/1.jpg'),
+        require('../../assets/images/home-slider/2.jpg'),
+        require('../../assets/images/home-slider/3.jpg'),
+        require('../../assets/images/home-slider/4.jpg'),
+        require('../../assets/images/home-slider/5.jpg'),
+        require('../../assets/images/home-slider/6.jpg'),
+        require('../../assets/images/home-slider/7.jpg'),
+        require('../../assets/images/home-slider/8.jpg'),
+      ],
     }
   },
   props: {
@@ -31,19 +40,7 @@ export default {
     swiperSlide,
     Download,
   },
-  mounted: function() {
-    fetch(api.reconmendSongs, {
-      headers : { 
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-      }
-      })
-      .then(res => res.json())
-      // .then(res => res.body)
-      .then(res => res.albums.map((elem) => {
-        this.lists.push(elem.picUrl)
-      }))
-  },
+    
 };
 
 </script>
