@@ -10,6 +10,7 @@ const base = 'https://netease-music-api.herokuapp.com';
 // 调用例子 : /top/playlist?limit=10&order=new
 const api = {
   reconmendSongs: `${base}/personalized/`,
+  new: `${base}/top/album?offset=0&limit=10`,
   board: `${base}/top/list`,
   playlist: `${base}/top/playlist`,
 };

@@ -42,19 +42,19 @@ export default {
   props: {
     
   },
-  data (){
+  data() {
     return {
-      lists:[]
-    }
+      lists: [],
+    };
   },
-  mounted: function() {
+  mounted: function () {
     fetch(api.reconmendSongs)
       .then(res => res.json())
       .then(res => res.result)
-      .then(res => {
-        this.lists=res.slice(0,8);
+      .then((res) => {
+        this.lists = res.slice(0, 8);
       });
-  }
+  },
 };
 </script>
 

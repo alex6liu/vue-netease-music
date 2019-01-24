@@ -18,7 +18,8 @@ export default {
   data() {
     return {
       swiperOption: {
-        autoplay:true
+        autoplay: true,
+        loop: true,
       },
       lists: [
         require('../../assets/images/home-slider/1.jpg'),
