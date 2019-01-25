@@ -2,9 +2,11 @@
   <div class="home">
     <web-header></web-header>
     <swiper></swiper>
-    <recommend></recommend>
-    <new></new>
-    <board></board>
+    <div class="discover">
+      <recommend></recommend>
+      <new></new>
+      <board></board>
+    </div>
   </div>
 </template>
 
@@ -27,3 +29,16 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+.discover {
+  width: 730px;
+  min-height: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-width: 0 1px;
+  display: flex;
+  flex-direction: column;
+}
+</style>

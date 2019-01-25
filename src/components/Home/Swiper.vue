@@ -1,13 +1,7 @@
 <template>
   <div class="swiper-container">
     <swiper :options="swiperOption" ref="mySwiper" class="swiper">
-      <swiper-slide>I'm Slide 1</swiper-slide>
-      <swiper-slide>I'm Slide 2</swiper-slide>
-      <swiper-slide>I'm Slide 3</swiper-slide>
-      <swiper-slide>I'm Slide 4</swiper-slide>
-      <swiper-slide>I'm Slide 5</swiper-slide>
-      <swiper-slide>I'm Slide 6</swiper-slide>
-      <swiper-slide>I'm Slide 7</swiper-slide>
+      <swiper-slide v-for="list in lists" v-bind:key="list.id"><img v-bind:src="list" class="slider-image" /></swiper-slide>
     </swiper>
     <download></download>
   </div>
@@ -17,15 +11,26 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
 import Download from './Download.vue';
-import { reconmendSongs } from '../../utils/api.js';
+import api from '../../utils/api.js';
 
 export default {
   name: 'Swiper',
   data() {
     return {
       swiperOption: {
-        autoplay:true
-      }
+        autoplay: true,
+        loop: true,
+      },
+      lists: [
+        require('../../assets/images/home-slider/1.jpg'),
+        require('../../assets/images/home-slider/2.jpg'),
+        require('../../assets/images/home-slider/3.jpg'),
+        require('../../assets/images/home-slider/4.jpg'),
+        require('../../assets/images/home-slider/5.jpg'),
+        require('../../assets/images/home-slider/6.jpg'),
+        require('../../assets/images/home-slider/7.jpg'),
+        require('../../assets/images/home-slider/8.jpg'),
+      ],
     }
   },
   props: {
@@ -36,6 +41,7 @@ export default {
     swiperSlide,
     Download,
   },
+    
 };
 
 </script>
@@ -46,5 +52,9 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.slider-image {
+  width: 730px;
+  height: 336px;
 }
 </style>
