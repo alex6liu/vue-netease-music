@@ -5,10 +5,10 @@
         <img src="../assets/icon/company.png" class="netease"/>
         <span>网易云音乐</span>
       </div>
-      <router-link to="/discover" class="pages">发现音乐</router-link>
-      <router-link to="/my" class="pages">我的音乐</router-link>
-      <router-link to="/" class="pages">朋友</router-link>
-      <router-link to="/" class="pages">商城</router-link>
+      <a href="/discover" class="pages">发现音乐</a>
+      <a href="/my" class="pages">我的音乐</a>
+      <a href="/" class="pages">朋友</a>
+      <a href="/" class="pages">商城</a>
     </div>
     <sub-bar></sub-bar>
   </div>
