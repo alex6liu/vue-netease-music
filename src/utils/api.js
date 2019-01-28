@@ -11,7 +11,8 @@ const base = 'https://netease-music-api.herokuapp.com';
 const api = {
   reconmendSongs: `${base}/personalized/`,
   new: `${base}/top/album?offset=0&limit=10`,
-  board: `${base}/top/list`,
+  board: `${base}/toplist`,
+  singleBoard: `${base}/top/list?idx=`,
   playlist: `${base}/top/playlist`,
 };
 
